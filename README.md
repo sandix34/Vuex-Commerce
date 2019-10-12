@@ -4,6 +4,14 @@
 ```
 npm install
 ```
+## Install [JSON Server](https://github.com/typicode/json-server) 
+```
+npm install -g json-server
+```
+### Start JSON Server
+```
+npm run jsnsrv
+```
 
 ### Compiles and hot-reloads for development
 ```
