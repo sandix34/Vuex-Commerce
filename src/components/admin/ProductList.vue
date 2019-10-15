@@ -18,8 +18,8 @@
           <td class="p-4">{{ product.title }}</td>
           <td class="p-4">{{ product.author.firstName }} {{ product.author.name }}</td>
           <td class="p-4">{{ product.publisher }}</td>
-          <td class="p-4">2{{ product.year }}</td>
-          <td class="p-4">im{{ product.image }}</td>
+          <td class="p-4">{{ product.year }}</td>
+          <td class="p-4"><img :src="product.image" style="height:100px"></td>
           <td class="p-4 text-blue-500">
             <button class="px-2 hover:bg-white">Edit</button>
             <span>|</span>
