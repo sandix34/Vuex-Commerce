@@ -13,26 +13,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="hover:bg-blue-100 border-t border-gray-300">
-          <th class="p-4">1</th>
-          <td class="p-4">aze</td>
-          <td class="p-4">qsd</td>
-          <td class="p-4">xwc</td>
-          <td class="p-4">2019</td>
-          <td class="p-4">image</td>
-          <td class="p-4 text-blue-500">
-            <button class="px-2 hover:bg-white">Edit</button>
-            <span>|</span>
-            <button class="px-2 hover:bg-white">Delete</button>
-          </td>
-        </tr>
-        <tr class="hover:bg-blue-100 border-t border-gray-300">
-          <th class="p-4">1</th>
-          <td class="p-4">aze</td>
-          <td class="p-4">qsd</td>
-          <td class="p-4">xwc</td>
-          <td class="p-4">2019</td>
-          <td class="p-4">image</td>
+        <tr v-for="product in products" :key="product.id" class="hover:bg-blue-100 border-t border-gray-300">
+          <th class="p-4">{{ product.id }}</th>
+          <td class="p-4">{{ product.title }}</td>
+          <td class="p-4">{{ product.author.firstName }} {{ product.author.name }}</td>
+          <td class="p-4">{{ product.publisher }}</td>
+          <td class="p-4">2{{ product.year }}</td>
+          <td class="p-4">im{{ product.image }}</td>
           <td class="p-4 text-blue-500">
             <button class="px-2 hover:bg-white">Edit</button>
             <span>|</span>
