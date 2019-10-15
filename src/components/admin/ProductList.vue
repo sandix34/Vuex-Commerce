@@ -45,5 +45,20 @@
 </template>
 
 <script>
-export default {};
+import productService from '../../services/productService';
+
+export default {
+  data() {
+    return {
+      products: [],
+    }
+  },
+  created() {
+    productService.getProducts().then(res => {
+      console.log(res);
+      this.products = res.data;
+      
+    })
+  }
+};
 </script>
