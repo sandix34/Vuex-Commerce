@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center">
+  <div class="flex justify-center pt-8">
     <table class="table-auto">
       <thead class="bg-gray-200 uppercase text-grey-400">
         <tr class="border-t border-gray-300 text-gray-600">
