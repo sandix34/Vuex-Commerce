@@ -16,7 +16,7 @@ export default new Vuex.Store({
     CREATE_PRODUCT(state, product) {
       state.products = [product, ...state.products];
     },
-    CREATE_ERROR(state, error) {
+    GET_PRODUCTS_ERROR(state, error) {
       state.errors = [error, ...state.errors];
     }
   },
@@ -30,7 +30,7 @@ export default new Vuex.Store({
           date: new Date(),
           message: `failed to retrieve products: ${err.message}` 
         }
-        commit("CREATE_ERROR", error);
+        commit("GET_PRODUCTS_ERROR", error);
       });
     },
     createProduct({ commit }, product) {
