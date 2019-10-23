@@ -1,30 +1,24 @@
 <template>
-  <div id="app">
-    <div id="nav" class="text-center">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/contact">Contact</router-link> |
-      <router-link to="/admin">Admin</router-link>
+  <div id="app" class="p-4">
+    <div id="nav" class="font-semibold p-8 text-gray-700">
+      <span class="p-2 relative">
+        <router-link to="/">Home</router-link>
+      </span>
+      <span class="p-2">
+        <router-link to="/contact">Contact</router-link>
+      </span>
+      <span class="p-2">
+        <router-link to="/admin">Admin</router-link>
+      </span>
+      <span class="p-8 absolute top-0 right-0">
+        <router-link to="/cart">Cart (0)</router-link>
+      </span>
     </div>
     <router-view />
   </div>
 </template>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /*text-align: center;*/
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
 
 #nav a.router-link-exact-active {
   color: #42b983;
