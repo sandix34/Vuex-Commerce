@@ -1,16 +1,22 @@
 <template>
   <div>
-    <router-link to="/admin/product-add" class="no-underline hover:underline text-blue-500 text-lg font-extrabold p-8">Add new book</router-link>
+    <div class="text-center">
+      <router-link
+        to="/admin/product-add"
+        class="m-8 px-3 py-3 font-medium bg-blue-500 rounded-lg text-white hover:bg-gray-400 focus:outline-none focus:bg-gray-400"
+        >Add new book</router-link
+      >
+    </div>
     <ProductList />
   </div>
 </template>
 
 <script>
-import ProductList from '@/components/admin/ProductList';
+import ProductList from "@/components/admin/ProductList";
 
 export default {
-	components: {
-		ProductList,
-	}, 
+  components: {
+    ProductList
+  }
 };
 </script>

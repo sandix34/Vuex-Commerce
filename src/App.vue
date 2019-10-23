@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav" class="text-center">
       <router-link to="/">Home</router-link> |
-      <router-link to="/contact">Contact</router-link> | 
+      <router-link to="/contact">Contact</router-link> |
       <router-link to="/admin">Admin</router-link>
     </div>
     <router-view />

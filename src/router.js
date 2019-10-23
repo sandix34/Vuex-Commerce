@@ -28,6 +28,5 @@ export default new Router({
       name: "admin-product-add",
       component: () => import("./views/admin/ProductAdd.vue")
     }
-
   ]
 });

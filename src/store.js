@@ -7,7 +7,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     products: [],
-    errors: [],
+    errors: []
   },
   mutations: {
     GET_PRODUCTS(state, products) {
@@ -22,16 +22,18 @@ export default new Vuex.Store({
   },
   actions: {
     getProducts({ commit }) {
-      productService.getProducts().then(res => {
-        commit("GET_PRODUCTS", res.data);
-      })
-      .catch(err => {
-        const error = {
-          date: new Date(),
-          message: `failed to retrieve products: ${err.message}` 
-        }
-        commit("GET_PRODUCTS_ERROR", error);
-      });
+      productService
+        .getProducts()
+        .then(res => {
+          commit("GET_PRODUCTS", res.data);
+        })
+        .catch(err => {
+          const error = {
+            date: new Date(),
+            message: `failed to retrieve products: ${err.message}`
+          };
+          commit("GET_PRODUCTS_ERROR", error);
+        });
     },
     createProduct({ commit }, product) {
       productService.createProduct(product).then(() => {

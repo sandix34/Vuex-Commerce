@@ -3,8 +3,8 @@ module.exports = {
     extend: {}
   },
   variants: {
-    backgroundColor: ['responsive', 'hover', 'focus'],
-    tableLayout: ['responsive', 'hover', 'focus'],
+    backgroundColor: ["responsive", "hover", "focus"],
+    tableLayout: ["responsive", "hover", "focus"]
   },
   plugins: []
-}
+};

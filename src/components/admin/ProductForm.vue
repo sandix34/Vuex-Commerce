@@ -1,6 +1,9 @@
 <template>
   <div class="flex justify-center">
-    <form @submit.prevent="create" class="shadow-2xl p-16 w-2/4 border-gray-100">
+    <form
+      @submit.prevent="create"
+      class="shadow-2xl p-16 w-2/4 border-gray-100"
+    >
       <div class="flex flex-col">
         <label for="id">ID</label>
         <input
@@ -63,28 +66,30 @@
       </div>
       <div class="flex flex-col">
         <label for="price">Price</label>
-        <input 
-          type="text" 
-          class="border border-gray-400 mb-4 p-1" 
-          id="price" 
+        <input
+          type="text"
+          class="border border-gray-400 mb-4 p-1"
+          id="price"
           placeholder="Price"
           v-model="book.price"
-         />
+        />
       </div>
       <div class="flex flex-col">
         <label for="image">Image</label>
-        <input 
-          type="text" 
-          class="border border-gray-400 mb-4 p-1" 
-          id="image" 
+        <input
+          type="text"
+          class="border border-gray-400 mb-4 p-1"
+          id="image"
           placeholder="Image"
-          v-model="book.image" 
+          v-model="book.image"
         />
       </div>
       <button
         type="submit"
         class="border rounded bg-blue-500 py-2 px-4 text-white font-medium tracking-wide"
-      >Submit</button>
+      >
+        Submit
+      </button>
     </form>
   </div>
 </template>
@@ -104,7 +109,7 @@ export default {
         price: "",
         image: ""
       }
-    }
+    };
   },
   methods: {
     create() {

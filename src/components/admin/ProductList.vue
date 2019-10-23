@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center pt-8">
+  <div class="flex justify-center mt-8">
     <table class="table-auto">
       <thead class="bg-gray-200 uppercase text-grey-400">
         <tr class="border-t border-gray-300 text-gray-600">
@@ -13,13 +13,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="product in products" :key="product.id" class="hover:bg-blue-100 border-t border-gray-300">
+        <tr
+          v-for="product in products"
+          :key="product.id"
+          class="hover:bg-blue-100 border-t border-gray-300"
+        >
           <th class="p-4">{{ product.id }}</th>
           <td class="p-4">{{ product.title }}</td>
-          <td class="p-4">{{ product.author.firstName }} {{ product.author.name }}</td>
+          <td class="p-4">
+            {{ product.author.firstName }} {{ product.author.name }}
+          </td>
           <td class="p-4">{{ product.publisher }}</td>
           <td class="p-4">{{ product.year }}</td>
-          <td class="p-4"><img :src="product.image" style="height:100px"></td>
+          <td class="p-4"><img :src="product.image" style="height:100px" /></td>
           <td class="p-4 text-blue-500">
             <button class="px-2 hover:bg-white">Edit</button>
             <span>|</span>
@@ -32,15 +38,14 @@
 </template>
 
 <script>
-
 export default {
   created() {
     this.$store.dispatch("getProducts");
   },
   computed: {
     products() {
-      return this.$store.state.products; 
+      return this.$store.state.products;
     }
-  },
+  }
 };
 </script>
