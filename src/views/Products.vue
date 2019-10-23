@@ -17,7 +17,10 @@
         <div class="text-3xl">
           {{ product.price }}<span class="text-base font-semibold"> €</span>
         </div>
-        <button class="text-blue-500 font-extrabold underline">
+        <button
+          @click="addToCart(product)"
+          class="text-blue-500 font-extrabold underline"
+        >
           Add to cart
         </button>
       </div>
@@ -33,6 +36,13 @@ export default {
   computed: {
     products() {
       return this.$store.state.products;
+    }
+  },
+  methods: {
+    addToCart(product) {
+      this.$store.dispatch("addToCart", product).then(() => {
+        console.log(this.$store.state.cart);
+      });
     }
   }
 };

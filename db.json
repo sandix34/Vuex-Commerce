@@ -111,5 +111,57 @@
       "image": "image.png",
       "id": "55555548888"
     }
+  ],
+  "cart": [
+    {
+      "id": 9780596517748,
+      "title": "JavaScript: The Good Parts",
+      "author": {
+        "name": "Crockford",
+        "firstName": "Douglas"
+      },
+      "publisher": "O'Reilly Media",
+      "year": 2008,
+      "price": 29.99,
+      "image": "https://images-na.ssl-images-amazon.com/images/I/5131OWtQRaL._SL200_.jpg"
+    },
+    {
+      "id": 9780132350884112,
+      "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+      "author": [
+        {
+          "name": "Gamma",
+          "firstName": "Erich "
+        },
+        {
+          "name": "Helm",
+          "firstName": "Richard "
+        },
+        {
+          "name": "Johnson",
+          "firstName": "Ralph "
+        },
+        {
+          "name": "Vlissides",
+          "firstName": "John"
+        }
+      ],
+      "publisher": "Prentice Hall",
+      "year": 2008,
+      "price": 34.47,
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51szD9HC9pL._SL200_.jpg"
+    },
+    {
+      "id": 9781593279509,
+      "title": "Eloquent JavaScript, 3rd Edition: A Modern Introduction to Programming",
+      "author": {
+        "name": "Haverbeke",
+        "firstName": "Marijn"
+      },
+      "publisher": "No Starch Press",
+      "year": 2018,
+      "price": 39.95,
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51I9naPg55L._SL200_.jpg"
+    }
   ]
 }
