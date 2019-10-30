@@ -1,5 +1,11 @@
 # vuex-commerce
 
+### site de e-commerce et son interface d'aministration.
+Projet réalisé dans le cadre de la formation e-learning "Devenir opérationnel rapidement en Vue et Vuex" proposé par [CodeConcept](https://codeconcept.teachable.com/)  :fr:
+
+![vuexCommerce](https://user-images.githubusercontent.com/44428775/67873070-30ac1a80-fb33-11e9-9dbc-b55609b8c3bf.gif)
+
+
 ## Project setup
 ```
 npm install
