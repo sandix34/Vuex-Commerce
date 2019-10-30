@@ -40,7 +40,8 @@ export default {
   },
   removeOneFromCart(product) {
     return new Promise(resolve => {
-      const products = JSON.parse(localStorage.getItem("vuex-commerce-cart")).products;
+      const products = JSON.parse(localStorage.getItem("vuex-commerce-cart"))
+        .products;
       const index = products.findIndex(p => p.id === product.id);
       products[index].quantity -= 1;
 

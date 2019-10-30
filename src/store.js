@@ -62,7 +62,10 @@ export default new Vuex.Store({
       return productService
         .removeOneFromCart(product)
         .then(() => {
-          commit("REMOVE_ONE_FROM_CART", JSON.parse(localStorage.getItem("vuex-commerce-cart")))
+          commit(
+            "REMOVE_ONE_FROM_CART",
+            JSON.parse(localStorage.getItem("vuex-commerce-cart"))
+          );
         })
         .catch(err => console.error(err));
     }
