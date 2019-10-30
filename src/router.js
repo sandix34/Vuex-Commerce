@@ -27,6 +27,11 @@ export default new Router({
       path: "/admin/product-add",
       name: "admin-product-add",
       component: () => import("./views/admin/ProductAdd.vue")
+    },
+    {
+      path: "/cart",
+      name: "cart",
+      component: () => import("./views/Cart.vue")
     }
   ]
 });

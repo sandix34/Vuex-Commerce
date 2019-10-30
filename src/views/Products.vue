@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-wrap" v-if="products">
     <div
-      class="relative flex-col justify-between p-2 m-2 w-64 shadow"
+      class="flex-col items-stretch justify-between p-2 m-2 w-64 shadow"
       v-for="product in products"
       :key="product.id"
     >
@@ -13,13 +13,13 @@
           :src="product.image"
         />
       </div>
-      <div class="absolute inset-x-0 bottom-0 flex flex-row justify-around">
+      <div class=" flex justify-around">
         <div class="text-3xl">
           {{ product.price }}<span class="text-base font-semibold"> €</span>
         </div>
         <button
           @click="addToCart(product)"
-          class="text-blue-500 font-extrabold underline"
+          class="flex-grow text-right text-blue-500 font-extrabold underline"
         >
           Add to cart
         </button>
