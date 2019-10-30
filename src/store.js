@@ -22,6 +22,9 @@ export default new Vuex.Store({
     },
     UPDATE_CART(state, cart) {
       state.cart = cart;
+    },
+    REMOVE_ONE_FROM_CART(state, cart) {
+      state.cart = cart;
     }
   },
   actions: {
@@ -52,6 +55,14 @@ export default new Vuex.Store({
             "UPDATE_CART",
             JSON.parse(localStorage.getItem("vuex-commerce-cart"))
           );
+        })
+        .catch(err => console.error(err));
+    },
+    removeOneFromCart({ commit }, product) {
+      return productService
+        .removeOneFromCart(product)
+        .then(() => {
+          commit("REMOVE_ONE_FROM_CART", JSON.parse(localStorage.getItem("vuex-commerce-cart")))
         })
         .catch(err => console.error(err));
     }
