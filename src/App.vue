@@ -11,12 +11,22 @@
         <router-link to="/admin">Admin</router-link>
       </span>
       <span class="p-8 absolute top-0 right-0">
-        <router-link to="/cart">Cart (0)</router-link>
+        <router-link to="/cart">Cart ({{ numberArticlesInCart }})</router-link>
       </span>
     </div>
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    numberArticlesInCart() {
+      return this.$store.getters.getNumberArticleInCart; 
+    }
+  },
+}
+</script>
 
 <style>
 #nav a.router-link-exact-active {
