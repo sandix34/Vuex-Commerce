@@ -11,7 +11,11 @@
         <router-link to="/admin">Admin</router-link>
       </span>
       <span class="p-8 absolute top-0 right-0">
-        <router-link to="/cart">Cart ({{ numberArticlesInCart }})</router-link>
+        <router-link to="/cart"
+          ><i class="fas fa-shopping-cart p-2"></i>Cart ({{
+            numberArticlesInCart
+          }})</router-link
+        >
       </span>
     </div>
     <router-view />
@@ -22,10 +26,10 @@
 export default {
   computed: {
     numberArticlesInCart() {
-      return this.$store.getters.getNumberArticleInCart; 
+      return this.$store.getters.getNumberArticleInCart;
     }
-  },
-}
+  }
+};
 </script>
 
 <style>
